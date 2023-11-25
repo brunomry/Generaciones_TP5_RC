@@ -1,23 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta
-  name="description"
-  content="Resolución de Trabajo Práctico N°5 de RollingCode - DOM (Document Object Model)"
-/>
-<meta
-  name="keywords"
-  content="trabajo practico 5, modeo de objetos del documento, DOM, Bootstrap5, soluciones, javascript"
-/>
-<meta name="author" content="Bruno Madozzo Romay" />
-  <title>EJERCICIO N°2 | TRABAJO PRÁCTICO N°5 | ROLLING CODE SCHOOL</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="./CSS/styles.css">
-</head>
-<body>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <script src="./JS/ejercicio1-tp5.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Resolución de Trabajo Práctico N°5 de RollingCode - DOM (Document Object Model)"
+    />
+    <meta
+      name="keywords"
+      content="trabajo practico 5, modeo de objetos del documento, DOM, Bootstrap5, soluciones, javascript"
+    />
+    <meta name="author" content="Bruno Madozzo Romay" />
+    <title>EJERCICIO N°2 | TRABAJO PRÁCTICO N°5 | ROLLING CODE SCHOOL</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./CSS/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md py-4 bg-white">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold fst-italic" href="../index.html"
+            >Trabajo Práctico 5</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse text-center"
+            id="navbarNavDropdown"
+          >
+            <ul class="navbar-nav w-100 d-flex justify-content-center fs-5">
+              <li class="nav-item px-2">
+                <a class="nav-link active" href="../index.html"
+                  >EJERCICIO N°1</a
+                >
+              </li>
+              <li class="nav-item px-2">
+                <a class="nav-link" href="sobreMi.html">SOBRE MÍ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="bg-body-tertiary py-5">
+      <h1 class="text-center mb-4">
+        ¡Anímate a conocer tu generación y rasgo característico!
+      </h1>
+      <section class="container mt-2">
+        <form
+          class="row w-75 py-4 px-md-3 shadow rounded-3 formBgColor m-auto border bg-white"
+        >
+          <h4 class="mb-3 text-center titleForm">COMPLETA EL FORMULARIO</h4>
+          <p class="mb-4">
+            Completá tus datos para conocer a qué generación pertenecés y cuál
+            es tu rasgo característico
+          </p>
+          <div class="col-md-7 mb-3">
+            <label for="nombre" class="form-label lead"
+              >NOMBRE Y APELLIDO: <span class="text-danger">*</span></label
+            >
+            <input
+              type="text"
+              class="form-control rounded-4 bgInput"
+              id="nombre"
+              placeholder="Nombre y Apellido"
+              minlength="3"
+              maxlength="25"
+              required
+            />
+          </div>
+          <div class="col-md-5 mb-3">
+            <label for="dni" class="form-label lead"
+              >DNI: <span class="text-danger">*</span></label
+            >
+            <input
+              type="text"
+              class="form-control rounded-4"
+              id="dni"
+              minlength="8"
+              maxlength="8"
+              placeholder="DNI sin puntos"
+              required
+            />
+          </div>
+          <div class="col-md-6 col-lg-4 mb-3">
+            <label for="anioNacimiento" class="form-label lead"
+              >AÑO DE NACIMIENTO: <span class="text-danger">*</span></label
+            >
+            <input
+              type="text"
+              class="form-control rounded-4"
+              id="anioNacimiento"
+              minlength="4"
+              maxlength="4"
+              placeholder="Año de nacimiento"
+              required
+            />
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="peso" class="form-label lead"
+              >PESO: <span class="text-danger">*</span></label
+            >
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control rounded-start-4 w-50"
+                id="peso"
+                minlength="2"
+                maxlength="3"
+                placeholder="Peso"
+                required
+              />
+              <span class="input-group-text rounded-end-4">Kg</span>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="altura" class="form-label lead"
+              >ALTURA: <span class="text-danger">*</span></label
+            >
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control rounded-start-4"
+                id="altura"
+                minlength="3"
+                maxlength="3"
+                placeholder="Altura"
+                required
+              />
+              <span class="input-group-text rounded-end-4">Cm</span>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="edad" class="form-label lead"
+              >EDAD: <span class="text-danger">*</span></label
+            >
+            <input
+              type="text"
+              class="form-control rounded-4"
+              id="edad"
+              minlength="2"
+              maxlength="2"
+              placeholder="Edad"
+              required
+            />
+          </div>
+          <div class="col-md-6 mb-3 ms-lg-3">
+            <p class="mb-2 lead mb-2">
+              SEXO: <span class="text-danger">*</span>
+            </p>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="sexo"
+                id="hombre"
+                value="hombre"
+                required
+              />
+              <label class="form-check-label" for="hombre">Hombre</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="sexo"
+                id="mujer"
+                value="mujer"
+                required
+              />
+              <label class="form-check-label" for="mujer">Mujer</label>
+            </div>
+          </div>
+          <p class="mb-0">
+            <span class="text-danger lead">*</span> Campo obligatorio
+          </p>
+          <div class="d-flex gap-3 mt-3 justify-content-center">
+            <button
+              type="submit"
+              class="btn btn-primary py-2 px-md-3 rounded-4 fs-5"
+            >
+              Enviar
+            </button>
+          </div>
+        </form>
+        <div class="d-flex gap-3 mt-5 justify-content-center">
+          <button
+            type="submit"
+            class="btn btn-outline-danger px-3 rounded-4 fs-5"
+            id="mostrarGeneracion"
+          >
+            Mostrar Generación
+          </button>
+          <button
+            type="submit"
+            class="btn py-2 btn-outline-success px-3 rounded-4 fs-5"
+            id="esMayor"
+          >
+            Es Mayor de Edad
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-dark p-3">
+      <div class="text-light text-center">
+        <p>
+          @RollingCodeSchool. Comisión 73i. 2023 | Diseñado por Bruno Madozzo
+        </p>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./JS/ejercicio1-tp5.js"></script>
+  </body>
 </html>

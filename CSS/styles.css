@@ -1,0 +1,40 @@
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main{
+  flex-grow: 1;
+}
+
+.btn-primary{
+  width: 100%;
+}
+
+/*sobre mi*/
+.imageProfile{
+  width: 425px;
+  height: 425px;
+}
+
+.imageProfile:hover{
+  width: 500px;
+  height: 500px;
+  transition: .3s ease-in-out;
+}
+
+a .socialIcon{
+  font-size: 40px;
+}
+
+a .socialIcon:hover{
+  font-size: 50px;
+  transition: .3s ease-in-out;
+}
+
+@media all and (min-width: 768px){
+  .btn-primary{
+    width: 50%;
+  }
+}

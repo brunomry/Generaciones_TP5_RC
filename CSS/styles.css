@@ -33,6 +33,12 @@ a .socialIcon:hover{
   transition: .3s ease-in-out;
 }
 
+@media all and (min-width: 576px){
+  form{
+    width: 75%;
+  }
+}
+
 @media all and (min-width: 768px){
   .btn-primary{
     width: 50%;
